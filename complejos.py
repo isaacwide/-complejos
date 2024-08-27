@@ -46,5 +46,6 @@ class complejos:
         return argumento   
     def raices_complejos():
         #aqui van las raices complejas
+        print("hola mundo como estamos dichs")
         print("hola munfi sdoknos")
         print("hola mundo")
