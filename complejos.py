@@ -55,8 +55,9 @@ class complejos:
     
 
 numer=complejos(parteReal=2, parteImg=2)
-
+print(numer.parteReal)
+#argumento del complejo
 print(numer.forma_trigonometrica())
 
-# Obtener las raíces complejas
+# Obtener las raíces complejas este cas 3
 print(numer.raices_complejos(3))
