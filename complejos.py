@@ -1,9 +1,8 @@
 import math
 
-class complejos:
+class Complejos:
  
     def __init__(self,parteReal,parteImg):
-        super().__init__()
         self.parteReal=parteReal
         self.parteImg=parteImg
         
@@ -37,27 +36,8 @@ class complejos:
              print("retorno al inicio")               
         return argumento   
   
-    def raices_complejos(self, n):
-        #aqui van las raices complejas
-        #aqui van los argumentos de cada complejos
-        modulo=math.sqrt(self.parteReal**2+self.parteImg**2)
-        arg=math.radians(self.forma_trigonometrica())
-        lista_argumentos=[]
-       #obtenemos el valor de deel agumento interno 
-        for i in range(0,n):
-            argumento_complejo= (arg+ (2*math.pi)*i)/n
-            lista_argumentos.append(argumento_complejo)
-
-        raiz_enecima_modulo=pow(modulo,1/n)
-
-        return raiz_enecima_modulo , lista_argumentos
-
     
-
-numer=complejos(parteReal=2, parteImg=2)
+numer=Complejos(parteReal=2, parteImg=2)
 print(numer.parteReal)
 #argumento del complejo
 print(numer.forma_trigonometrica())
-
-# Obtener las raíces complejas este cas 3
-print(numer.raices_complejos(3))
