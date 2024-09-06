@@ -4,6 +4,7 @@ class Operaciones(Complejos):
 
     def __init__(self, parteReal, parteImg):
         super().__init__(parteReal, parteImg)
+    #ingresa 4 datos que se combierten 
 
     def sumar_complejos(self, a, b, c, d):
         z1 = Complejos(a, b)
@@ -22,16 +23,34 @@ class Operaciones(Complejos):
 
     #en estas dos secciones usaremos la forma trigonometrica de un complejo
     #dos instancias para poder operar los dos complejos
-    def multiplicarComplejos():
-        print()
+    def multiplicarComplejos(self, a, b, c, d):
+        z1 = Complejos(a, b)
+        z2 = Complejos(c, d)
+
+        #calculamos los argumentos de los numeros complejos
+        arg1=math.radians(z1.forma_trigonometrica())#asociado con z1
+        arg2=math.radians(z2.forma_trigonometrica())#asociado con z2
+        
+        #calculamos los modulos de cada complejo 
+        modulo_1=math.sqrt(z1.parteReal**2+z1.parteImg**2)#asociado con z1
+        modulo_2=math.sqrt(z2.parteReal**2+z2.parteImg**2)
+
+        modulo_resultado=modulo_1*modulo_2
+        arg_resultante=arg1+arg2
+
+        return modulo_resultado , arg_resultante
+        
+
     def DividirComplejos():
         pass
 
-    def raices_complejos(self,a, b, c, d, n):
+
+    def raices_complejos(self,a, b, n):
         #aqui van las raices complejas
         #aqui van los argumentos de cada complejos
-        modulo=math.sqrt(self.parteReal**2+self.parteImg**2)
-        arg=math.radians(self.forma_trigonometrica())
+        z1 = Complejos(a, b)
+        modulo=math.sqrt(z1.parteReal**2+z1.parteImg**2)
+        arg=math.radians(z1.forma_trigonometrica())
         lista_argumentos=[]
        #obtenemos el valor de deel agumento interno 
         for i in range(0,n):
@@ -41,6 +60,8 @@ class Operaciones(Complejos):
         raiz_enecima_modulo=pow(modulo,1/n)
 
         return raiz_enecima_modulo , lista_argumentos
+    
+    
     def potencia():
         pass
 oper = Operaciones(parteReal=0, parteImg=0)
