@@ -62,7 +62,15 @@ class Operaciones(Complejos):
         return raiz_enecima_modulo , lista_argumentos
     
     
-    def potencia():
-        pass
+    def potencia(self,a,b,e):
+        z1=Complejos(a,b)
+        modulo_z1=math.sqrt(z1.parteReal**2+z1.parteImg**2)
+        argument_z1=math.radians(z1.forma_trigonometrica())
+        exp_z1_mod=e*modulo_z1
+        exp_z1_arg=e*argument_z1
+
+        return exp_z1_mod, exp_z1_arg
+
+      
 oper = Operaciones(parteReal=0, parteImg=0)
 print(oper.sumar_complejos(2, 3, 4, 5))
