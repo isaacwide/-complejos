@@ -35,6 +35,9 @@ class Complejos:
         elif(self.parteReal==0 and self.parteImg==0):
              print("retorno al inicio")               
         return argumento   
+
+    def forma_polar(self):
+         pass
   
     
 numer=Complejos(parteReal=2, parteImg=2)
